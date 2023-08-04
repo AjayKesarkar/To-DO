@@ -1,8 +1,12 @@
 from functions import get_todos,write_todos
 import time
 
+now = time.strftime("%b %d, %Y %H:%M:%S")
+print('It is ', now)
+
 while True:
     user_input = input('Choose to add, show or exit: ')
+    user_input = user_input.strip()
     if user_input.startswith('add'):
         todo = user_input[4:]
 
